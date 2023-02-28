@@ -1,7 +1,7 @@
 import { IFaqs, ISectionWithImg } from "../interfaces/i-common";
 
 export class ObjectConstants {
-    public static CAROUSEL_IMGS: string[] = ['cvbc-01.jpg', 'cvbc-02.jpg', 'cvbc-03.jpg'];
+    public static CAROUSEL_IMGS: string[] = ['cvbc-03.jpg', 'cvbc-02.jpg', 'cvbc-01.jpg'];
 
     public static CLIENT_TESTIMONY: ISectionWithImg[] = [
         {
@@ -67,6 +67,5 @@ export class ObjectConstants {
             title: "Expertly Written Context",
             img: "fa fa-file-signature content-info-icon",
             description: `75% of resumes filtered by ATS. Get to the top of "YES" pile with ATS friendly resume.`
-        }
-    ]
+        }];
 }

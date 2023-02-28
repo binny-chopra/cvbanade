@@ -1,7 +1,11 @@
 @import "../../../../src/variables";
 
 img {
-    width: 100%
+    width: 100%;
+}
+
+.mx-ht-300 {
+    max-height: 300px;
 }
 
 .carousel-div-box {
@@ -11,6 +15,16 @@ img {
 .black-shadow {
     text-shadow: 2px 2px 5px $primary-color;
 }
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
+    padding: 1.25rem 1.25rem 0.6rem 1.25rem;
+    width: 70%;
+  }
 
 .carousel-caption-head {
     font-size: 1.5rem;
@@ -22,7 +36,7 @@ img {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.12rem;
-    margin: 0 0 0.8rem;
+    margin: 0 0 0.6rem;
 }
 
 .content-info-icon {
