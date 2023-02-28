@@ -1,0 +1,10 @@
+<div class="container">
+    <h3 class="mt-3 mb-3">Frequently Asked Questions</h3>
+    <ngb-accordion [closeOthers]="true">
+        <ngb-panel *ngFor="let faq of faqsList" id="{{faq.id}}" title="{{faq.title}}">
+            <ng-template ngbPanelContent>
+                {{faq.description}}
+            </ng-template>
+        </ngb-panel>
+    </ngb-accordion>
+</div>

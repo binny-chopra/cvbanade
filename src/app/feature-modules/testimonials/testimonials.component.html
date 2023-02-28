@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="d-flex justify-content-between flex-wrap">
+        <div class="d-flex card-box mb-2" *ngFor="let client of successClients">
+            <div>
+                <img src="assets/images/{{client.img}}" class="card-img-top" alt="...">
+            </div>
+            <div class="margin-10">
+                <h5 class="card-title primary-font">{{client.title}}</h5>
+                <p class="card-text justify-text">{{client.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+@import "../../../../src/variables";
+
+img {
+    width: 100%
+}
+
+.carousel-div-box {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.black-shadow {
+    text-shadow: 2px 2px 5px $primary-color;
+}
+
+.carousel-caption-head {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+
+.carousel-caption-info {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    margin: 0 0 0.8rem;
+}
+
+.content-info-icon {
+    font-size: 2.75rem;
+    border: 1px solid $primary-dark;
+    padding: 1.25rem;
+    border-radius: 100%;
+    color: $primary-dark;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.content-icon-caption {
+    font-size: 1.15rem;
+    font-weight: 600;
+}

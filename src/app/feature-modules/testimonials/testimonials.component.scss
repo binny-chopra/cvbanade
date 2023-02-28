@@ -1,0 +1,20 @@
+@import "../../../../src/variables";
+
+img {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+}
+
+.card-box {
+    width: 545px;
+    background-color: $primary-light;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-10 {
+    margin: 10px;
+}

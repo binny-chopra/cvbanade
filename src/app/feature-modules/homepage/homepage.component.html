@@ -1,0 +1,29 @@
+<div>
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide *ngFor="let item of images">
+            <div>
+                <img [src]="item" alt="img" />
+            </div>
+            <div class="carousel-caption carousel-div-box black-shadow pt-0">
+                <div class="carousel-caption-head">Bhai Hai</div>
+                <div class="carousel-caption-info">Start your journey to your dream job today with just one click.</div>
+                <button class="dark-btn">Create My Future</button>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+<div class="container mb-4 mt-4">
+    <div class="row center-justified">
+        <div class="col-lg-4 col-md-4 col-12" *ngFor="let item of hpIconSection">
+            <div><i class="{{item.img}}"></i></div>
+            <div class="content-icon-caption">{{item.title}}</div>
+            <p>{{item.description}}</p>
+        </div>
+    </div>
+    <div class="text-center">
+        <h3 class="mt-3 mb-3">Just at the starting price of ₹299 only.</h3>
+        <button class="dark-btn"> TRY FOR FREE</button>
+    </div>
+</div>
+<app-testimonials></app-testimonials>
+<app-faqs></app-faqs>
