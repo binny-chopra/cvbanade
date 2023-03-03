@@ -15,7 +15,7 @@
 .header-view {
     box-shadow: $madison 0 1.25rem 1.875rem -0.625rem;
     min-height: 73.75px;
-    z-index: 1;
+    z-index: 10;
     position: sticky;
     top: 0;
 }

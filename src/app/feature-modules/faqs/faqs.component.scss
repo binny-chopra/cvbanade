@@ -3,12 +3,12 @@
 .accordion-button {
     padding: 0.625rem 1.25rem;
     background-color: $primary-color;
-    color: $seconday-color;
+    color: $secondary-color;
     font-size: 0.9rem;
 
     &:not(.collapsed) {
         background-color: $primary-color;
-        color: $seconday-color;
+        color: $secondary-color;
 
         &::after {
             background-image: url("../../../assets/images/dash-lg-white.svg");
@@ -16,8 +16,8 @@
     }
 
     &:focus {
-        box-shadow: 0 0 0 0.25rem rgba(70, 84, 163, 0.25);
-        border-color: $seconday-color;
+        box-shadow: 0 0 0 0.25rem $primary-rgb-25;
+        border-color: $secondary-color;
     }
 
     &::after {

@@ -15,15 +15,19 @@
 }
 
 .dark-btn {
-    @include btn-ui($seconday-color, $primary-color, $primary-dark);
+    @include btn-ui($secondary-color, $primary-color, $primary-dark);
 }
 
 .light-btn {
-    @include btn-ui($primary-color, $seconday-color, $primary-light);
+    @include btn-ui($primary-color, $secondary-color, $primary-light);
 }
 
 .justify-text {
     text-align: justify;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 .center-justified {

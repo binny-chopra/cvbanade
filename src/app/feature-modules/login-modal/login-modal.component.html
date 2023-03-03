@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="ngbActiveModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <form>
+        <div class="col"><input type="text" class="form-control" placeholder="{{emailPhoneLabel}}"></div>
+        <div class="col mt-2 mb-2 input-group">
+            <input [type]="inputType" id="pswdInput" class="form-control" placeholder="{{pswdLabel}}">
+            <span class="input-group-text cursor-pointer" (click)="showPassword()">
+                <i id="eyeIcon" [class]="eyeClass" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="col text-center">
+            <button class="dark-btn" aria-current="popup"><i class="fa fa-sign-in-alt"></i> {{loginLabel}}</button>
+        </div>
+    </form>
+    <section class="text-center login-options">
+        <div class="col"><a href="#">{{newUserLabel}}</a></div>
+        <div class="col mt-2 mb-2"><button>{{loginGoogle}} <img src="assets/images/google-3d-16.png"></button></div>
+        <div class="col mb-2"><button>{{loginLinkedin}} <img src="assets/images/linkedin-3d-16.png"></button></div>
+        <div class="col"><button>{{loginOtp}} <img src="assets/images/otp-3d-16.png"></button></div>
+    </section>
+</div>
+<div class="modal-footer">
+    <button type="button" class="dark-btn" (click)="ngbActiveModal.close('Close click')">{{closeLabel}}</button>
+</div>
