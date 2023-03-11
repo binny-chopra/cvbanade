@@ -1,12 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-modal',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './login-modal.component.html',
   styleUrls: ['./login-modal.component.scss']
 })
@@ -23,7 +21,7 @@ export class LoginModalComponent {
   public eyeClass: string = ApplicationConstants.ICON_EYE_SLASH;
   public closeLabel: string = ApplicationConstants.CLOSE;
 
-  constructor(public ngbActiveModal: NgbActiveModal) { }
+  constructor(public ngbActiveModal: NgbActiveModal, private router: Router) { }
 
   public showPassword(): void {
     let inputBox = document.getElementById(ApplicationConstants.ID_PSWD_INPUT);
@@ -37,5 +35,10 @@ export class LoginModalComponent {
       inputBox?.setAttribute(ApplicationConstants.TYPE, ApplicationConstants.PASSWORD);
       this.inputType = ApplicationConstants.PASSWORD;
     }
+  }
+
+  public goToSignUp(): void {
+    this.router.navigate([`/signup`]);
+    this.ngbActiveModal.close();
   }
 }

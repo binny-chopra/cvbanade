@@ -1,6 +1,6 @@
 <div class="modal-header">
     <h4 class="modal-title">Hi there!</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="ngbActiveModal.dismiss('Cross click')"></button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="ngbActiveModal.dismiss()"></button>
 </div>
 <div class="modal-body">
     <form>
@@ -16,12 +16,12 @@
         </div>
     </form>
     <section class="text-center login-options">
-        <div class="col"><a href="#">{{newUserLabel}}</a></div>
+        <div class="col"><label (click)="goToSignUp()">{{newUserLabel}}</label></div>
         <div class="col mt-2 mb-2"><button>{{loginGoogle}} <img src="assets/images/google-3d-16.png"></button></div>
         <div class="col mb-2"><button>{{loginLinkedin}} <img src="assets/images/linkedin-3d-16.png"></button></div>
         <div class="col"><button>{{loginOtp}} <img src="assets/images/otp-3d-16.png"></button></div>
     </section>
 </div>
 <div class="modal-footer">
-    <button type="button" class="dark-btn" (click)="ngbActiveModal.close('Close click')">{{closeLabel}}</button>
+    <button type="button" class="dark-btn" (click)="ngbActiveModal.close()">{{closeLabel}}</button>
 </div>

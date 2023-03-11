@@ -1,0 +1,45 @@
+@import "../../../../src/variables";
+
+* {
+    font-family: $cv-font-family;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.custom-stepper {
+    margin-top: 8px;
+}
+
+.mat-mdc-form-field {
+    margin-top: 0.25rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.addRemWorkEx {
+    button {
+        border: none;
+        background: none;
+        color: $primary-color;
+    }
+}
+
+.margin-v-12 {
+    @media (max-width: 768px) {
+        margin-bottom: 12px;
+    }
+
+    @media (min-width: 768px) {
+        margin-top: 12px;
+    }
+}

@@ -20,5 +20,7 @@ export class ApplicationConstants {
     public static ICON_EYE_SLASH: string = "fa fa-eye-slash";
     public static ICON_EYE: string = "fa fa-eye";
     public static EMAIL_PHONE: string = "Email or Phone Number";
-    public static CLOSE: string = "Close"
+    public static CLOSE: string = "Close";
+    public static PHONE_NUMBER_PATTERN: `^((\\+91-?)|0)?[0-9]{10}$`;
+    public static ALPHABETS_PATTERN: `^[a-zA-Z]*$`;
 }

@@ -10,6 +10,17 @@ import { TestimonialsComponent } from './feature-modules/testimonials/testimonia
 import { HomepageComponent } from './feature-modules/homepage/homepage.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { FaqsComponent } from './feature-modules/faqs/faqs.component';
+import { EnterCvInfoComponent } from './feature-modules/enter-cv-info/enter-cv-info.component';
+import { RouterModule } from '@angular/router';
+import { LoginModalComponent } from './feature-modules/login-modal/login-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -18,13 +29,25 @@ import { FaqsComponent } from './feature-modules/faqs/faqs.component';
     FooterComponent,
     TestimonialsComponent,
     HomepageComponent,
-    FaqsComponent    
+    FaqsComponent,
+    EnterCvInfoComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     NgbModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

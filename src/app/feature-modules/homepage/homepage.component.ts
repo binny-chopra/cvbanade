@@ -9,6 +9,6 @@ import { ISectionWithImg } from 'src/app/interfaces/i-common';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
-  images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.ASSETS_IMG}${img}`);
-  hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
+  public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.ASSETS_IMG}${img}`);
+  public hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
 }

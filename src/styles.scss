@@ -16,6 +16,10 @@
 
 .dark-btn {
     @include btn-ui($secondary-color, $primary-color, $primary-dark);
+
+    &:disabled {
+        background: #9098c7;
+    }
 }
 
 .light-btn {
@@ -33,4 +37,8 @@
 .center-justified {
     text-align: justify;
     text-align-last: center;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem $primary-rgb-25;
 }
