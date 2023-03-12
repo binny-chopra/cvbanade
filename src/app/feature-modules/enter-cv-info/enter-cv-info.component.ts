@@ -60,7 +60,10 @@ export class EnterCvInfoComponent implements OnInit {
     this.fillInLaterFlag = e?.checked;
     this.showAddWorkExBtn = !this.fillInLaterFlag;
     if (this.fillInLaterFlag) {
+      this.workExpGroup.disable();
+    } else {
       this.workExpGroup.reset();
+      this.workExpGroup.enable();
     }
   }
 

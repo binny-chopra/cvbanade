@@ -4,9 +4,9 @@
             <div class="mx-ht-300">
                 <img [src]="item" alt="img" />
             </div>
-            <div class="carousel-caption carousel-div-box black-shadow pt-0">
-                <div class="carousel-caption-head">Bhai Hai</div>
-                <div class="carousel-caption-info">Start your journey to your dream job today with just one click.</div>
+            <div class="carousel-caption carousel-div-box black-shadow pt-0 center-justified">
+                <div class="carousel-caption-head">{{homepgImgTitle}}</div>
+                <div class="carousel-caption-info">{{homepgImgSubtitle}}</div>
                 <button class="dark-btn">Create My Future</button>
             </div>
         </ng-template>
@@ -21,8 +21,8 @@
         </div>
     </div>
     <div class="text-center">
-        <h3 class="mt-3 mb-3">Just at the starting price of ₹299 only.</h3>
-        <button class="dark-btn">TRY FOR FREE</button>
+        <h3 class="mt-3 mb-3">{{startingAt}}</h3>
+        <button class="dark-btn">{{tryForFree}}</button>
     </div>
 </div>
 <app-testimonials></app-testimonials>

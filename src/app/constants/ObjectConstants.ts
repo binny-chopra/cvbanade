@@ -80,18 +80,18 @@ export class ObjectConstants {
 
     public static HOME_PG_ICON_SECTION: ISectionWithImg[] = [
         {
-            title: "Beat the Resume Bots",
+            title: "ELEVATE your game",
             img: "fa-solid fa-bug-slash content-info-icon",
-            description: `75% of resumes filtered by ATS. Get to the top of "YES" pile with ATS friendly resume.`
+            description: `ELEVATE your game with our comprehensive solution that covers everything from curating and vetting the content to design setting you up for SUCCESS.`
         },
         {
-            title: "Customizable Resume Templates",
+            title: "STANDOUT from your peers",
             img: "fa-solid fa-hand-sparkles content-info-icon",
-            description: `75% of resumes filtered by ATS. Get to the top of "YES" pile with ATS friendly resume.`
+            description: `Don't let your resume get lost on the career portals - our expertly crafted, ATS-compliant resumes helps you STANDOUT and get you noticed by the hiring managers from Day 1.`
         },
         {
-            title: "Expertly Written Context",
+            title: "MAXIMIZE your chances",
             img: "fa fa-file-signature content-info-icon",
-            description: `75% of resumes filtered by ATS. Get to the top of "YES" pile with ATS friendly resume.`
+            description: `MAXIMIZE your chances of securing your dream job with our team of dedicated human resume experts and proofreaders, who help you truly represent your skills and experience.`
         }];
 }
