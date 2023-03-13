@@ -1,5 +1,10 @@
 @import "../../../../src/variables";
 
+footer {
+    position: sticky;
+    top: 100%;
+}
+
 .fb-bg {
     background-color: $fb;
 }

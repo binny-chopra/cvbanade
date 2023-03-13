@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white header-view">
     <div class="container">
-        <img class="nav-logo" src="assets/images/logoOrigOnTransparent.png">
+        <img class="nav-logo cursor-pointer" src="assets/images/logoOrigOnTransparent.png" [routerLink]="['/']">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,9 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item margin-right-14">
-                    <button class="d-block dark-btn" aria-current="page" (click)="openLoginPopup()"><i class="fa fa-sign-in-alt"></i> {{loginLabel}}</button>
+                    <button class="d-block dark-btn" aria-current="page" (click)="openLoginPopup()">
+                        <i class="fa fa-sign-in-alt"></i> {{loginLabel}}
+                    </button>
                 </li>
                 <li class="margin-right-14 nav-item">
                     <button class="d-block light-btn"><i class="fa fa-file-alt"></i> {{createMyResumeLabel}}</button>

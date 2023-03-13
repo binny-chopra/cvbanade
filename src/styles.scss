@@ -2,6 +2,10 @@
 @import '../src/variables';
 @import '../src/partials';
 
+body {
+    min-height: 100vh;
+}
+
 .full-width {
     width: 100%;
 }

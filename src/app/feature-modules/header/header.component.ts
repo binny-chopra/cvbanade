@@ -13,11 +13,11 @@ export class HeaderComponent {
   public createMyResumeLabel: string = ApplicationConstants.CREATE_MY_RESUME;
   public help: string = ApplicationConstants.HELP;
 
-  constructor(private ngbModal: NgbModal) {}
+  constructor(private ngbModal: NgbModal) { }
 
   public openLoginPopup(): void {
-		const modalRef = this.ngbModal.open(LoginModalComponent);
-		// modalRef.componentInstance.name = 'World';
-	}
+    document.getElementById("navbarColor01")?.classList.remove("show");
+    const modalRef = this.ngbModal.open(LoginModalComponent);
+  }
 
 }
