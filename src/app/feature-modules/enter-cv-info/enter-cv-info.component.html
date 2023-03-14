@@ -52,7 +52,23 @@
                 <input matInput type="text" formControlName="workExpDesigantion">
               </mat-form-field>
             </div>
-            <div class="col-md-4 col-12">
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Location</mat-label>
+                <input matInput type="text" formControlName="workExpLocation">
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Work Type</mat-label>
+                <mat-select matNativeControl formControlName="workExpType">
+                  <mat-option value="fullTime">Full Time</mat-option>
+                  <mat-option value="partTime">Part Time</mat-option>
+                  <mat-option value="internship">Internship</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 col-6">
               <mat-form-field appearance="outline" floatLabel="always">
                 <mat-label>Start date</mat-label>
                 <input matInput [matDatepicker]="datepickerStart" placeholder="MM/DD/YYYY"
@@ -61,7 +77,7 @@
                 <mat-datepicker touchUi="true" #datepickerStart></mat-datepicker>
               </mat-form-field>
             </div>
-            <div class="col-md-4 col-12">
+            <div class="col-md-4 col-6">
               <mat-form-field appearance="outline" floatLabel="always">
                 <mat-label>End date</mat-label>
                 <input matInput [matDatepicker]="datepickerEnd" placeholder="MM/DD/YYYY"
@@ -77,12 +93,6 @@
             </div>
             <div class="col-12">
               <mat-form-field appearance="outline">
-                <mat-label>Skills</mat-label>
-                <input matInput type="text" formControlName="workExpSkills">
-              </mat-form-field>
-            </div>
-            <div class="col-12">
-              <mat-form-field appearance="outline">
                 <mat-label>Description</mat-label>
                 <textarea matInput formControlName="workExpDescription"></textarea>
               </mat-form-field>
@@ -92,7 +102,8 @@
                 <button *ngIf="workExpItems.length > 1" class="btn-link" (click)="removeWorkExp(i)">
                   Remove Experience
                 </button>
-                <mat-checkbox *ngIf="workExpItems.length === 1" color="primary" (change)="fillInLaterFn($event)">
+                <mat-checkbox *ngIf="workExpItems.length === 1" color="primary"
+                  (change)="fillInLaterFn($event, workExpGroup)">
                   Fill in later!
                 </mat-checkbox>
               </div>
@@ -115,20 +126,107 @@
       </form>
     </mat-step>
 
-    <mat-step [stepControl]="thirdFormGroup" label="Education">
-      <form [formGroup]="thirdFormGroup">
-        <mat-form-field appearance="fill">
-          <mat-label>Phone number</mat-label>
-          <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
-        </mat-form-field>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+    <mat-step [stepControl]="educationGroup" label="Education">
+      <form [formGroup]="educationGroup">
+        <ng-container formArrayName="educationDetails" *ngFor="let ctrl of educationDetails['controls']; let i = index">
+          <div class="row" [formGroupName]="i">
+            <div class="col-md-8 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>University Name</mat-label>
+                <input matInput type="text" formControlName="universityName">
+              </mat-form-field>
+            </div>
+            <div class="col-md-4 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Location</mat-label>
+                <input matInput type="text" formControlName="eduLocation">
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Education Level</mat-label>
+                <mat-select matNativeControl formControlName="eduLevel">
+                  <mat-option value="phd">PhD</mat-option>
+                  <mat-option value="Masters">Masters</mat-option>
+                  <mat-option value="bachelors">Bachelors</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <mat-form-field appearance="outline" floatLabel="always">
+                <mat-label>Start date</mat-label>
+                <input matInput [matDatepicker]="datepickerEduStart" placeholder="MM/DD/YYYY"
+                  formControlName="eduStartDate">
+                <mat-datepicker-toggle matIconSuffix [for]="datepickerEduStart"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="true" #datepickerEduStart></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3 col-md-6 col-6">
+              <mat-form-field appearance="outline" floatLabel="always">
+                <mat-label>End date (Expected)</mat-label>
+                <input matInput [matDatepicker]="datepickerEduEnd" placeholder="MM/DD/YYYY"
+                  formControlName="eduEndDate">
+                <mat-datepicker-toggle matIconSuffix [for]="datepickerEduEnd"></mat-datepicker-toggle>
+                <mat-datepicker touchUi="true" #datepickerEduEnd></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Grades</mat-label>
+                <input matInput type="text" formControlName="eduGrades">
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Extra Curricular</mat-label>
+                <textarea matInput formControlName="eduExtraCurricular"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="col-12">
+              <mat-form-field appearance="outline">
+                <mat-label>Any other details</mat-label>
+                <textarea matInput formControlName="eduOtherDetail"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="row mb-3 addRemWorkEx pe-0">
+              <div class="col-6">
+                <button *ngIf="eduDetailsItems.length > 1" class="btn-link" (click)="removeEduDetails(i)">
+                  Remove Education
+                </button>
+                <mat-checkbox *ngIf="eduDetailsItems.length === 1" color="primary"
+                  (change)="fillInLaterFn($event, educationGroup)">
+                  Fill in later!
+                </mat-checkbox>
+              </div>
+              <div class="col-6 text-end pe-0">
+                <button *ngIf="showAddWorkExBtn" class="btn-link" (click)="addEduDetails()">Add Education</button>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <div class="row">
+          <div class="col-6">
+            <button class="light-btn" mat-button matStepperPrevious>Back</button>
+          </div>
+          <div class="col-6 text-end">
+            <button class="dark-btn" [disabled]="!(educationGroup.valid || fillInLaterFlag)" mat-button matStepperNext>
+              Next
+            </button>
+          </div>
         </div>
       </form>
     </mat-step>
+
     <mat-step>
-      <ng-template matStepLabel>Done</ng-template>
+      <ng-template matStepLabel>SCH</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Review</ng-template>
       <p>You are now done.</p>
       <div>
         <button mat-button matStepperPrevious>Back</button>
