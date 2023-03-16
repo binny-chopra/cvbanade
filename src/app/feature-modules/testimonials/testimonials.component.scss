@@ -1,20 +1,48 @@
 @import "../../../../src/variables";
 
-img {
-    height: 120px;
-    width: 120px;
-    margin: 10px;
-}
+.testimonial-box {
+    background-color: $dark-charcoal;
+    margin: 1.25rem;
+    min-height: 13rem;
 
-.card-box {
-    width: 545px;
-    background-color: $primary-light;
-}
+    .testimonial-header {
+        color: $secondary-color;
+    }
 
-.margin-top-10 {
-    margin-top: 10px;
-}
+    .fa-quote-left {
+        font-size: 2.25rem;
+        padding: 0.625rem;
+        color: $yellow;
+    }
 
-.margin-10 {
-    margin: 10px;
+    label {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    .testimonial-desc {
+        color: $primary-light;
+        padding: 0.625rem;
+        font-size: 0.75;
+    }
+
+    .testimonial-footer {
+        position: sticky;
+        top: 100%;
+
+        .fa-star {
+            position: relative;
+            display: inline-block;
+            padding: 0.625rem 0 0.625rem 0.625rem;
+            color: $gray;
+
+            .filled {
+                color: $yellow;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 }

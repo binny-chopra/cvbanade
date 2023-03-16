@@ -9,3 +9,10 @@ export interface ISectionWithImg {
     description: string;
     img: string;
 }
+
+export interface ITestimonials {
+    title: string,
+    description: string;
+    img: string;
+    rating: number;
+}

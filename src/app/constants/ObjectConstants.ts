@@ -1,38 +1,56 @@
-import { IFaqs, ISectionWithImg } from "../interfaces/i-common";
+import { IFaqs, ISectionWithImg, ITestimonials } from "../interfaces/i-common";
 
 export class ObjectConstants {
     public static CAROUSEL_IMGS: string[] = ['cvbc-03.jpg', 'cvbc-02.jpg', 'cvbc-01.jpg'];
 
-    public static CLIENT_TESTIMONY: ISectionWithImg[] = [
+    public static CLIENT_TESTIMONY: ITestimonials[] = [
         {
-            title: "Binny Chopra",
+            title: "Rishabh Singhania",
             img: "dummy-t1.jpg",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "I was apprehensive about spending money on these services, but my resume desperately required assistance. The staff went above and beyond to be accommodating and responsive. They were comprehensive in their inquiries regarding my needs and my desired outcomes. I would give it a 10/10.",
+            rating: 5
         },
         {
-            title: "Partth Mahajan",
+            title: "Tanya Mehta",
             img: "dummy-t2.jpg",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "Outstanding service. The fact that they provide an end-to-end solution saved me a lot of trouble in selecting the perfect template to sort the right things to add from my long list of job duties and responsibilities. They send me a concise document that showcases everything I want my recruiter to see in a very organized and professional way.",
+            rating: 4.7
         },
         {
-            title: "Ashneer Grover",
+            title: "Jaspreet Singh",
             img: "dummy-t4.jpg",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "CVbanade's price was more than fair, the return time was quick, and the service and the resume I got were just up to the mark. I don't have any reservations about recommending CVbanade to anyone, regardless of where you're at in your career.",
+            rating: 4
         },
         {
-            title: "Falguni Nayyar",
+            title: "Sonal Mahajan",
             img: "dummy-t5.jpg",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "They know what they are doing and how to do it. Excellent service for people who are too lazy to put work into creating their CVs or just aren't really great at it. I am very satisfied with the final product.",
+            rating: 4.4
         },
         {
-            title: "Rishi Sunak",
+            title: "Aretha Augustine",
             img: "dummy-t3.jpg",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "I wanted to make sure my resume flowed adequately and looked professional. When I received the first edit, I was quite impressed. It truly saved me a lot of time and effort. I am extremely happy with the outcome. The expense was worthwhile.",
+            rating: 5
         },
         {
-            title: "No pic user",
+            title: "Farhan Khan",
             img: "dummy-t6.png",
-            description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+            description: "My qualifications were evaluated by CVbanade, who did an extremely good job of emphasizing them in my resume. The degree of expertise and attention to detail displayed by their writers definitely surprised me. My last resume was a complete mess. The improved version is unquestionably the best. I'm very glad I chose to use their services.",
+            rating: 4.6
+        },
+        {
+            title: "Shivansh Sharma",
+            img: "dummy-t6.png",
+            description: "It is such an innovative venture. Getting proper end-to-end support for resume writing is really something I didn't know I needed until I came across CVbanade! Their ATS complaint bot writes the first draft, and their writers make sure to convert that draft into a polished resume, just the way I wanted it to be. Great experience at such a nominal rate.",
+            rating: 4.8
+        },
+        {
+            title: "Hayat Ahmed",
+            img: "dummy-t6.png",
+            description: "The best part is I don't have to do anything but fill out a form sharing my details, and the next thing I know, I've got a copy of a personalized resume ready for me. It saved me from the hassle of sorting out the best template to designing and formatting the whole piece, and especially from deciding the right action words to use. The resume I got exceeded my expectations. Give CVbanade a shot! It's worth it!",
+            rating: 4.9
         }];
 
     public static FAQS: IFaqs[] = [
@@ -94,4 +112,8 @@ export class ObjectConstants {
             img: "fa fa-file-signature content-info-icon",
             description: `MAXIMIZE your chances of securing your dream job with our team of dedicated human resume experts and proofreaders, who help you truly represent your skills and experience.`
         }];
+
+    public static TESTIMONIAL_NAV_ICON: string[] = [
+        `<i class="fa-solid fa-caret-left"></i>`, `<i class="fa-solid fa-caret-right"></i>`
+    ]
 }

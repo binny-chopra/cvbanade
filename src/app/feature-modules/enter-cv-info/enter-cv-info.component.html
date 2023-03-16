@@ -217,12 +217,35 @@
       </form>
     </mat-step>
 
-    <mat-step>
-      <ng-template matStepLabel>SCH</ng-template>
-      <p>You are now done.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-      </div>
+    <mat-step [stepControl]="schGroup" label="SCH">
+      <form [formGroup]="schGroup">
+        <!-- <ng-container formArrayName="schSkills" *ngFor="let ctrl of schSkills['controls']; let i = index">
+          <div class="row" [formGroupName]="i">
+            <div class="col-12">
+              <div class="rounded skillsValue" (keyup.enter)="addSkills()" (enter)="$event.stopPropagation" contenteditable="true"></div>
+            </div>
+          </div>
+        </ng-container> -->
+        <!-- <div>
+          <div class="d-inline-block" formArrayName="schSkills"
+            *ngFor="let ctrl of schSkills['controls']; let i = index">
+            <div [formGroupName]="i">
+              <div #skillInput class="skillsDiv" contenteditable="true" placeholder="Skill"
+                (keydown.enter)="$event.preventDefault()" (keyup.enter)="addSkills()" formControlName="skills">
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <ng-container formArrayName="schSkills" *ngFor="let ctrl of schSkills['controls']; let i = index">
+          <div [formGroupName]="i">
+            <input #skillInput class="skillsInputStyle" (keyup.enter)="addSkills($event)" placeholder="Skills"
+              formControlName="skills" value="ctrl.value">
+          </div>
+        </ng-container>
+        <div class="mt-3">
+          <button mat-button matStepperPrevious>Back</button>
+        </div>
+      </form>
     </mat-step>
 
     <mat-step>

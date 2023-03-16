@@ -1,13 +1,21 @@
 <div class="container">
-    <div class="d-flex justify-content-between flex-wrap">
-        <div class="d-flex card-box mb-2" *ngFor="let client of successClients">
-            <div>
-                <img src="assets/images/{{client.img}}" class="card-img-top" alt="image">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let client of successClients">
+            <div class="testimonial-box">
+                <div class="testimonial-header">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <label> {{client.title}}</label>
+                </div>
+                <div class="center-justified testimonial-desc">{{client.description}}</div>
+                <div class="testimonial-footer">
+                    <ng-template #t let-fill="fill">
+                        <i class="fa-solid fa-star">
+                            <i *ngIf="fill > 0" class="fa-solid fa-star filled" [style.width.%]="fill"></i>
+                        </i>
+                    </ng-template>
+                    <ngb-rating [(rate)]="client.rating" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+                </div>
             </div>
-            <div class="margin-10">
-                <h5 class="card-title primary-font">{{client.title}}</h5>
-                <p class="card-text justify-text">{{client.description}}</p>
-            </div>
-        </div>
-    </div>
+        </ng-template>
+    </owl-carousel-o>
 </div>

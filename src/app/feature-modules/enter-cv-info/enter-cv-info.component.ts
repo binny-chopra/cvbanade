@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { Validators, UntypedFormBuilder, UntypedFormGroup, UntypedFormArray, UntypedFormControl } from '@angular/forms';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { StepperOrientation } from '@angular/material/stepper';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MatCheckboxChange } from '@angular/material/checkbox';
 
@@ -12,6 +12,7 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
   styleUrls: ['./enter-cv-info.component.scss']
 })
 export class EnterCvInfoComponent implements OnInit {
+  @ViewChildren('skillInput') skillInput!: QueryList<ElementRef>;
   public showAddWorkExBtn: boolean = true;
   public fillInLaterFlag: boolean = false;
   public formBuilder = new UntypedFormBuilder;
@@ -20,6 +21,8 @@ export class EnterCvInfoComponent implements OnInit {
   public workExpItems!: UntypedFormArray;
   public educationGroup!: UntypedFormGroup;
   public eduDetailsItems!: UntypedFormArray;
+  public schGroup!: UntypedFormGroup;
+  public skillsItems!: UntypedFormArray;
   public thirdFormGroup = this.formBuilder.group({
     thirdCtrl: ['', Validators.required],
   });
@@ -44,8 +47,14 @@ export class EnterCvInfoComponent implements OnInit {
     this.educationGroup = new UntypedFormGroup({
       educationDetails: new UntypedFormArray([])
     });
+    this.schGroup = new UntypedFormGroup({
+      schSkills: new UntypedFormArray([]),
+      schCertifications: new UntypedFormArray([]),
+      schHobbies: new UntypedFormArray([])
+    });
     this.addWorkExp();
     this.addEduDetails();
+    this.addSkills();
   }
 
   get workExperience() {
@@ -56,6 +65,10 @@ export class EnterCvInfoComponent implements OnInit {
     return this.educationGroup.get('educationDetails') as UntypedFormArray;
   }
 
+  get schSkills() {
+    return this.schGroup.get('schSkills') as UntypedFormArray;
+  }
+
   public addWorkExp(): void {
     this.workExpItems = this.workExpGroup.get('workExperience') as UntypedFormArray;
     this.workExpItems.push(this.generateWorkExpRow());
@@ -64,7 +77,27 @@ export class EnterCvInfoComponent implements OnInit {
   public addEduDetails(): void {
     this.eduDetailsItems = this.educationGroup.get('educationDetails') as UntypedFormArray;
     this.eduDetailsItems.push(this.generateEducationRow());
-    console.log(this.educationGroup.value)
+  }
+
+  public addSkills(e?: Event): void {
+    console.log(e)
+    this.skillInput?.changes.pipe(take(1)).subscribe({
+      next: changes => changes.last.nativeElement.focus()
+    });
+    this.skillsItems = this.schGroup.get('schSkills') as UntypedFormArray;
+    // let skillsArray = this.schGroup.get('schSkills')?.value;
+    // if(!this.skillsItems.value.some((item: { [x: string]: string; })=> item['skills'] === "")) {
+    //   this.skillsItems.push(this.generateSchSkillsRow());
+    // }
+    // this.schGroup.value['schSkills'] = skillsArray;
+    const index = this.skillsItems.value.findIndex((item: any) => item['schSkills'] === "");
+    if (index === -1) {
+      this.skillsItems.push(this.generateSchSkillsRow());
+    } else {
+      this.skillsItems.removeAt(index);
+    }
+    console.log(this.skillsItems.value)
+    console.log(this.schGroup.value);
   }
 
   public removeWorkExp(i: number): void {
@@ -73,6 +106,10 @@ export class EnterCvInfoComponent implements OnInit {
 
   public removeEduDetails(i: number): void {
     this.eduDetailsItems.removeAt(i);
+  }
+
+  public removeSchSkills(i: number): void {
+    this.skillsItems.removeAt(i);
   }
 
   public fillInLaterFn(e: MatCheckboxChange, formGroupName: UntypedFormGroup): void {
@@ -109,6 +146,12 @@ export class EnterCvInfoComponent implements OnInit {
       eduGrades: new UntypedFormControl("", Validators.required),
       eduExtraCurricular: new UntypedFormControl(""),
       eduOtherDetail: new UntypedFormControl("")
+    });
+  }
+
+  private generateSchSkillsRow(): UntypedFormGroup {
+    return new UntypedFormGroup({
+      skills: new UntypedFormControl("", Validators.required)
     });
   }
 }
