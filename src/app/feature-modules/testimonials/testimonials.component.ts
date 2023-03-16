@@ -10,7 +10,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class TestimonialsComponent {
   successClients: ITestimonials[] = ObjectConstants.CLIENT_TESTIMONY;
-  slidesStore!: any[];
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
