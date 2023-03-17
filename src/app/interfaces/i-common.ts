@@ -16,3 +16,10 @@ export interface ITestimonials {
     img: string;
     rating: number;
 }
+
+export interface IPricing {
+    title: string;
+    price: number;
+    popular: boolean;
+    features: string[];
+}

@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h4 class="modal-title">Pricing Options</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="ngbActiveModal.dismiss()"></button>
+</div>
+
+<div class="modal-body">
+    <div class="body-margin mb-3">
+        <div class="row">
+            <div class="col-12 col-md-6 col-xl-3 mt-5 mt-md-4 mt-xl-3 text-center parent" *ngFor="let item of pricingOptions">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="title">{{item.title}}</div>
+                        <div class="pricing">
+                            <span>
+                                <label>INR</label><span>{{item.price}}</span>
+                            </span>
+                            <span class="per-cv">/ CV</span>
+                        </div>
+                    </div>
+                    <span class="badge-box">Save 35%</span>
+                    <ul>
+                        <li *ngFor="let feature of item.features">
+                            {{feature}}
+                        </li>
+                    </ul>
+                    <button class="dark-btn my-5">BUY NOW</button>
+                    <div *ngIf="item.popular" class="popular">POPULAR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="dark-btn" (click)="ngbActiveModal.close()">CLOSE</button>
+</div>

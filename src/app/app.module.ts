@@ -24,6 +24,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-desc.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
     HomepageComponent,
     FaqsComponent,
     EnterCvInfoComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    PricingDescComponent
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
 <div>
     <ngb-carousel *ngIf="images">
         <ng-template ngbSlide *ngFor="let item of images">
-            <div class="mx-ht-300">
+            <div class="max-ht-hp-img">
                 <img [src]="item" alt="img" />
             </div>
             <div class="carousel-caption carousel-div-box black-shadow pt-0">
                 <div class="carousel-caption-head">{{homepgImgTitle}}</div>
                 <div class="carousel-caption-info center-justified">{{homepgImgSubtitle}}</div>
-                <button class="dark-btn">Create My Future</button>
+                <button class="dark-btn" (click)="openPricing()">Create my future</button>
             </div>
         </ng-template>
     </ngb-carousel>
@@ -15,7 +15,7 @@
 <div class="container mb-4 mt-4">
     <div class="row center-justified">
         <div class="col-lg-4 col-md-4 col-12" *ngFor="let item of hpIconSection">
-            <div><i class="{{item.img}}"></i></div>
+            <div class="mb-2 content-info-icon"><img src="{{imagesPath}}{{item.img}}"></div>
             <div class="content-icon-caption">{{item.title}}</div>
             <p>{{item.description}}</p>
         </div>

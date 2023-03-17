@@ -1,4 +1,4 @@
-import { IFaqs, ISectionWithImg, ITestimonials } from "../interfaces/i-common";
+import { IFaqs, IPricing, ISectionWithImg, ITestimonials } from "../interfaces/i-common";
 
 export class ObjectConstants {
     public static CAROUSEL_IMGS: string[] = ['cvbc-03.jpg', 'cvbc-02.jpg', 'cvbc-01.jpg'];
@@ -99,21 +99,48 @@ export class ObjectConstants {
     public static HOME_PG_ICON_SECTION: ISectionWithImg[] = [
         {
             title: "ELEVATE your game",
-            img: "fa-solid fa-bug-slash content-info-icon",
+            img: "upstairs.svg",
             description: `ELEVATE your game with our comprehensive solution that covers everything from curating and vetting the content to design setting you up for SUCCESS.`
         },
         {
             title: "STANDOUT from your peers",
-            img: "fa-solid fa-hand-sparkles content-info-icon",
+            img: "standout.svg",
             description: `Don't let your resume get lost on the career portals - our expertly crafted, ATS-compliant resumes helps you STANDOUT and get you noticed by the hiring managers from Day 1.`
         },
         {
             title: "MAXIMIZE your chances",
-            img: "fa fa-file-signature content-info-icon",
+            img: "resume-handsup.svg",
             description: `MAXIMIZE your chances of securing your dream job with our team of dedicated human resume experts and proofreaders, who help you truly represent your skills and experience.`
         }];
 
     public static TESTIMONIAL_NAV_ICON: string[] = [
         `<i class="fa-solid fa-caret-left"></i>`, `<i class="fa-solid fa-caret-right"></i>`
+    ]
+
+    public static PRICING_OPTIONS: IPricing[] = [
+        {
+            title: "KICKSTARTER",
+            price: 299,
+            popular: false,
+            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+        },
+        {
+            title: "STANDARD",
+            price: 399,
+            popular: false,
+            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+        },
+        {
+            title: "PROFESSIONAL",
+            price: 499,
+            popular: true,
+            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+        },
+        {
+            title: "DREAM CV",
+            price: 599,
+            popular: true,
+            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+        }
     ]
 }

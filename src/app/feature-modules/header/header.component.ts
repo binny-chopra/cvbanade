@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ApplicationConstants } from '../../constants/ApplicationConstants';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +18,10 @@ export class HeaderComponent {
 
   public openLoginPopup(): void {
     document.getElementById("navbarColor01")?.classList.remove("show");
-    const modalRef = this.ngbModal.open(LoginModalComponent);
+    this.ngbModal.open(LoginModalComponent);
   }
 
+  public openPricing(): void {
+    this.ngbModal.open(PricingDescComponent, { size: 'pricing-width' });
+  }
 }
