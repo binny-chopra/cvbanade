@@ -56,8 +56,8 @@ export class ObjectConstants {
     public static FAQS: IFaqs[] = [
         {
             id: "faq00",
-            title: "How will you get my information?",
-            description: "It's the simplest step, you just need to login and upload an existing resume if you have or fill an introductory form where you can let us know more about your background, current goals, and experiences. The form takes only about a few minutes to complete. Your responses will help us determine the content and structure of your resume."
+            title: "What do you offer?",
+            description: "CVbanade offers an end-to-end solution for a tedious, time-consuming resume writing exercise. We not only save you from spending hours deciding on the perfect format or description. We collect your data and deliver your personalized resume directly to you."
         },
         {
             id: "faq01",
@@ -67,33 +67,34 @@ export class ObjectConstants {
         },
         {
             id: "faq02",
-            title: "How much will it cost to use the CVbanade services?",
+            title: "How much will it cost?",
             description: "You have a variety of options to choose from here. The kickstarter plan starts from Rs. 299 only."
         },
         {
             id: "faq03",
-            title: "How long should a resume be?",
-            description: "It is always recommended to make a one-page document. However, if you're a professional (CA, lawyer, freelancer) or academician with a considerable amount of experience in your industry, you can make a two-page document that enlists all roles, publications and assignments taken so far."
+            title: "What is the difference between a CV and a resume?",
+            description: `A resume and a CV (curriculum vitae) are both documents used to showcase a person's professional qualifications and experiences, but they differ in length, content, and purpose.
+            A resume is typically a one-page document that summarizes a person's work experience, skills, education, and achievements relevant to the job they are applying for. Resumes are usually tailored to a specific job or industry and are often used in the United States and Canada.
+            On the other hand, a CV is a comprehensive document that provides a detailed overview of a person's academic and professional background. It typically includes information such as education, work experience, publications, research projects, and professional affiliations. CVs are usually used in academic, research, or medical fields and are more common in countries outside of the United States.
+            In summary, a resume is a concise summary of a person's relevant qualifications for a specific job, while a CV is a comprehensive document that provides a detailed overview of a person's entire academic and professional background.`
         },
         {
             id: "faq04",
-            title: "What does CVbanade exactly offer?",
-            description: "CVbanade offers an end-to-end solution for a tedious, time-consuming resume writing exercise. We not only save you from spending hours deciding on the perfect format or description. We collect your data and deliver your personalized resume directly to you."
+            title: "What is ATS compliance and how does it better my chances?",
+            description: `ATS is an abbreviation for "Applicant Tracking System". It is a software used by organizations to manage their recruitment and hiring processes. ATS automates and streamlines the process of sourcing, screening, and tracking job candidates. It helps recruiters and hiring managers to save time and effort by automating routine tasks. It also identifies certain keywords that match the job position ad and even highlights relevant professional experience and skills.`
         },
         {
             id: "faq05",
-            title: "What can I do if I need help with my CVbanade account?",
-            description: "If you experience any issues while using the CVbanade website, you can mail us at team@cvbanade.com."
+            title: "Why is ATS compliance necessary for my resume?",
+            description: `ATS compliance is necessary for your resume because many companies use ATS software to manage their recruitment process. When you submit your resume to an organization, the ATS scans your resume for specific keywords and phrases related to the job you are applying for.
+            If your resume is not ATS compliant, it may not be able to pass the initial screening process, and you may not even be considered for the position. By making your resume ATS compliant, you increase your chances of passing the initial screening process and getting noticed by recruiters and hiring managers.
+            To make your resume ATS compliant, you need to ensure that it includes relevant keywords and phrases related to the job, uses simple formatting, and avoids using images or graphics. At CVbanade we make sure your resume is ATS compliant for you.
+            `
         },
         {
             id: "faq06",
-            title: "How do I build a resume in CVbanade?",
-            description: "You give us your details in a simple form or an old resume if you have and we craft a personalized resume for you. You don't have to spend hours deciding the right skills or fuss over the right font or the right description of your past jobs. CVbanade provides you with a comprehensive solution from collecting information to delivering you an ATS compliant, clean and crisp resume."
-        },
-        {
-            id: "faq07",
-            title: "Will my resume be accessible to everyone?",
-            description: "Your information will be kept private and will be accessible only to you using your login credentials."
+            title: "How long should be a resume ideally?",
+            description: "It is always recommended to make a one-page document. However, if you're a professional (CA, lawyer, freelancer) or academician with a considerable amount of experience in your industry, you can make a two-page document that enlists all roles, publications and assignments taken so far."
         }];
 
     public static HOME_PG_ICON_SECTION: ISectionWithImg[] = [
@@ -121,24 +122,28 @@ export class ObjectConstants {
         {
             title: "KICKSTARTER",
             price: 299,
+            previousPrice: 399,
             popular: false,
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         },
         {
             title: "STANDARD",
             price: 399,
+            previousPrice: 499,
             popular: false,
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         },
         {
             title: "PROFESSIONAL",
             price: 499,
+            previousPrice: 599,
             popular: true,
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         },
         {
             title: "DREAM CV",
             price: 599,
+            previousPrice: 699,
             popular: true,
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         }

@@ -1,9 +1,10 @@
 @import "../../../../src/variables";
 
 .testimonial-box {
-    background-color: $dark-charcoal;
+    background-color: $primary-light;
     margin: 1.25rem;
     min-height: 13rem;
+    box-shadow: rgb(14 30 37 / 12%) 0 0.125rem 0.25rem 0, rgb(14 30 37 / 32%) 0 0.125rem 1rem 0;
 
     .testimonial-header {
         color: $secondary-color;
@@ -12,16 +13,17 @@
     .fa-quote-left {
         font-size: 2.25rem;
         padding: 0.625rem;
-        color: $yellow;
+        color: $primary-color;
     }
 
     label {
         font-weight: 600;
         font-size: 1.25rem;
+        color: $primary-color;
     }
 
     .testimonial-desc {
-        color: $primary-light;
+        color: $primary-color;
         margin: 0.625rem;
         font-size: 0.75rem;
         max-height: 5.625rem;
@@ -39,7 +41,7 @@
             color: $gray;
 
             .filled {
-                color: $yellow;
+                color: $primary-color;
                 overflow: hidden;
                 position: absolute;
                 top: 0;
@@ -48,27 +50,16 @@
         }
     }
 
-    scrollbar-color: $dark-charcoal $gray;
-
     ::-webkit-scrollbar {
         width: 0.25rem;
     }
 
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 0.25rem $gray;
-        border-radius: 0.5rem;
-    }
-
     ::-webkit-scrollbar-thumb {
-        background: $dark-gray;
+        background: $primary-rgb-25;
         border-radius: 0.625rem;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: $dark-gray;
-    }
-
-    ::-webkit-scrollbar-track-piece {
-        background: $dark-charcoal;
+        background: $primary-rgb-25;
     }
 }

@@ -4,6 +4,7 @@ import { ObjectConstants } from 'src/app/constants/ObjectConstants';
 import { ISectionWithImg } from 'src/app/interfaces/i-common';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
+import { HelpModalComponent } from '../help-modal/help-modal.component';
 
 @Component({
   selector: 'app-homepage',
@@ -23,5 +24,9 @@ export class HomepageComponent {
 
   public openPricing(): void {
     this.ngbModal.open(PricingDescComponent, { size: 'pricing-width' });
+  }
+
+  public openHelp(): void {
+    this.ngbModal.open(HelpModalComponent);
   }
 }

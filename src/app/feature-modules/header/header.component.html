@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white header-view">
-    <div class="container">
+    <div class="container-fluid">
         <img class="nav-logo cursor-pointer" src="assets/images/logoOrigOnTransparent.png" [routerLink]="['/']">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
             aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,7 +7,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item margin-right-14">
+                <li *ngIf="false" class="nav-item margin-right-14">
                     <button class="d-block dark-btn" aria-current="page" (click)="openLoginPopup()">
                         <i class="fa fa-sign-in-alt"></i> {{loginLabel}}
                     </button>
@@ -16,7 +16,7 @@
                     <button class="d-block light-btn" (click)="openPricing()"><i class="fa fa-file-alt"></i> {{createMyResumeLabel}}</button>
                 </li>
                 <li class="nav-item">
-                    <button class="d-block light-btn"><i class="fa fa-question-circle"></i> {{help}}</button>
+                    <button class="d-block light-btn" (click)="openHelp()"><i class="fa fa-question-circle"></i> {{help}}</button>
                 </li>
             </ul>
         </div>

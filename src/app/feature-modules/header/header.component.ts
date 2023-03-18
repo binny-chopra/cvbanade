@@ -3,6 +3,7 @@ import { ApplicationConstants } from '../../constants/ApplicationConstants';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
+import { HelpModalComponent } from '../help-modal/help-modal.component';
 
 @Component({
   selector: 'app-header',
@@ -22,6 +23,12 @@ export class HeaderComponent {
   }
 
   public openPricing(): void {
+    document.getElementById("navbarColor01")?.classList.remove("show");
     this.ngbModal.open(PricingDescComponent, { size: 'pricing-width' });
+  }
+
+  public openHelp(): void {
+    document.getElementById("navbarColor01")?.classList.remove("show");
+    this.ngbModal.open(HelpModalComponent);
   }
 }

@@ -1,7 +1,7 @@
 <div>
-    <ngb-carousel *ngIf="images">
+    <ngb-carousel *ngIf="images" [showNavigationIndicators]="false">
         <ng-template ngbSlide *ngFor="let item of images">
-            <div class="max-ht-hp-img">
+            <div class="ht-hp-img">
                 <img [src]="item" alt="img" />
             </div>
             <div class="carousel-caption carousel-div-box black-shadow pt-0">
@@ -15,14 +15,16 @@
 <div class="container mb-4 mt-4">
     <div class="row center-justified">
         <div class="col-lg-4 col-md-4 col-12" *ngFor="let item of hpIconSection">
-            <div class="mb-2 content-info-icon"><img src="{{imagesPath}}{{item.img}}"></div>
+            <div class="mb-2 content-info-icon cursor-pointer" (click)="openHelp()">
+                <img src="{{imagesPath}}{{item.img}}">
+            </div>
             <div class="content-icon-caption">{{item.title}}</div>
             <p>{{item.description}}</p>
         </div>
     </div>
     <div class="text-center">
         <h3 class="mt-3 mb-3">{{startingAt}}</h3>
-        <button class="dark-btn">{{tryForFree}}</button>
+        <button *ngIf="false" class="dark-btn">{{tryForFree}}</button>
     </div>
 </div>
 <app-testimonials></app-testimonials>

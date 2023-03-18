@@ -25,6 +25,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-desc.component';
+import { HelpModalComponent } from './feature-modules/help-modal/help-modal.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-des
     FaqsComponent,
     EnterCvInfoComponent,
     LoginModalComponent,
-    PricingDescComponent
+    PricingDescComponent,
+    HelpModalComponent
   ],
   imports: [
     BrowserModule,

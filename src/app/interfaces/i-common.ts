@@ -20,6 +20,7 @@ export interface ITestimonials {
 export interface IPricing {
     title: string;
     price: number;
+    previousPrice: number;
     popular: boolean;
     features: string[];
 }

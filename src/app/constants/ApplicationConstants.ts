@@ -21,7 +21,7 @@ export class ApplicationConstants {
     public static ICON_EYE: string = "fa fa-eye";
     public static EMAIL_PHONE: string = "Email or Phone Number";
     public static CLOSE: string = "Close";
-    public static HOMEPG_IMG_TITLE: string = "Curating, especially for you.";
+    public static HOMEPG_IMG_TITLE: string = "Unlock your Potential on Paper!";
     public static HOMEPG_IMG_SUBTITLE: string = "Give your job search the best chance of success by presenting your skills and experience in the most compelling way possible with a professionally written resume.";
     public static STARTING_AT: string = "Just at the starting price of ₹299 only.";
     public static TRY_FOR_FREE: string = "TRY FOR FREE";

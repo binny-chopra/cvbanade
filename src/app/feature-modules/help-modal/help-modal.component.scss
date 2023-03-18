@@ -1,0 +1,11 @@
+@import "../../../../src/variables";
+
+.modal-body {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+
+    u {
+        font-weight: bold;
+        color: $primary-color;
+    }
+}
