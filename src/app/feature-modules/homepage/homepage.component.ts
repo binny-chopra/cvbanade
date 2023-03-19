@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
 import { ObjectConstants } from 'src/app/constants/ObjectConstants';
 import { ISectionWithImg } from 'src/app/interfaces/i-common';
-import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
 import { HelpModalComponent } from '../help-modal/help-modal.component';
 import { UiService } from 'src/app/services/ui.service';
