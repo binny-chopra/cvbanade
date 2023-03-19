@@ -73,9 +73,9 @@ export class ObjectConstants {
         {
             id: "faq03",
             title: "What is the difference between a CV and a resume?",
-            description: `A resume and a CV (curriculum vitae) are both documents used to showcase a person's professional qualifications and experiences, but they differ in length, content, and purpose.
-            A resume is typically a one-page document that summarizes a person's work experience, skills, education, and achievements relevant to the job they are applying for. Resumes are usually tailored to a specific job or industry and are often used in the United States and Canada.
-            On the other hand, a CV is a comprehensive document that provides a detailed overview of a person's academic and professional background. It typically includes information such as education, work experience, publications, research projects, and professional affiliations. CVs are usually used in academic, research, or medical fields and are more common in countries outside of the United States.
+            description: `A resume and a CV (curriculum vitae) are both documents used to showcase a person's professional qualifications and experiences, but they differ in length, content, and purpose.<br>
+            A resume is typically a one-page document that summarizes a person's work experience, skills, education, and achievements relevant to the job they are applying for. Resumes are usually tailored to a specific job or industry and are often used in the United States and Canada.<br>
+            On the other hand, a CV is a comprehensive document that provides a detailed overview of a person's academic and professional background. It typically includes information such as education, work experience, publications, research projects, and professional affiliations. CVs are usually used in academic, research, or medical fields and are more common in countries outside of the United States.<br>
             In summary, a resume is a concise summary of a person's relevant qualifications for a specific job, while a CV is a comprehensive document that provides a detailed overview of a person's entire academic and professional background.`
         },
         {
@@ -86,8 +86,8 @@ export class ObjectConstants {
         {
             id: "faq05",
             title: "Why is ATS compliance necessary for my resume?",
-            description: `ATS compliance is necessary for your resume because many companies use ATS software to manage their recruitment process. When you submit your resume to an organization, the ATS scans your resume for specific keywords and phrases related to the job you are applying for.
-            If your resume is not ATS compliant, it may not be able to pass the initial screening process, and you may not even be considered for the position. By making your resume ATS compliant, you increase your chances of passing the initial screening process and getting noticed by recruiters and hiring managers.
+            description: `ATS compliance is necessary for your resume because many companies use ATS software to manage their recruitment process. When you submit your resume to an organization, the ATS scans your resume for specific keywords and phrases related to the job you are applying for.\n
+            If your resume is not ATS compliant, it may not be able to pass the initial screening process, and you may not even be considered for the position. By making your resume ATS compliant, you increase your chances of passing the initial screening process and getting noticed by recruiters and hiring managers.\n
             To make your resume ATS compliant, you need to ensure that it includes relevant keywords and phrases related to the job, uses simple formatting, and avoids using images or graphics. At CVbanade we make sure your resume is ATS compliant for you.
             `
         },

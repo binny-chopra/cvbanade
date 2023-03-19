@@ -26,6 +26,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-desc.component';
 import { HelpModalComponent } from './feature-modules/help-modal/help-modal.component';
+import { UiService } from './services/ui.service';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { HelpModalComponent } from './feature-modules/help-modal/help-modal.comp
     CarouselModule,
     NgbRatingModule
   ],
-  providers: [],
+  providers: [UiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

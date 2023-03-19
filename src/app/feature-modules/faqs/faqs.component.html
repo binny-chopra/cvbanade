@@ -3,7 +3,7 @@
     <ngb-accordion [closeOthers]="true">
         <ngb-panel *ngFor="let faq of faqsList" id="{{faq.id}}" title="{{faq.title}}">
             <ng-template ngbPanelContent>
-                <div class="justify-text">{{faq.description}}</div>
+                <div class="justify-text" innerHTML="{{faq.description}}"></div>
             </ng-template>
         </ngb-panel>
     </ngb-accordion>

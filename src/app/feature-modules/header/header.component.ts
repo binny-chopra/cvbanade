@@ -4,6 +4,7 @@ import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
 import { HelpModalComponent } from '../help-modal/help-modal.component';
+import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,7 @@ export class HeaderComponent {
   public createMyResumeLabel: string = ApplicationConstants.CREATE_MY_RESUME;
   public help: string = ApplicationConstants.HELP;
 
-  constructor(private ngbModal: NgbModal) { }
+  constructor(private ngbModal: NgbModal, private uiService: UiService) { }
 
   public openLoginPopup(): void {
     document.getElementById("navbarColor01")?.classList.remove("show");
@@ -24,11 +25,11 @@ export class HeaderComponent {
 
   public openPricing(): void {
     document.getElementById("navbarColor01")?.classList.remove("show");
-    this.ngbModal.open(PricingDescComponent, { size: 'pricing-width' });
+    this.ngbModal.open(PricingDescComponent, this.uiService.openPopup('xl'));
   }
 
   public openHelp(): void {
     document.getElementById("navbarColor01")?.classList.remove("show");
-    this.ngbModal.open(HelpModalComponent);
+    this.ngbModal.open(HelpModalComponent, this.uiService.openPopup());
   }
 }
