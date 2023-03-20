@@ -1,5 +1,5 @@
 <div>
-    <ngb-carousel *ngIf="images" [showNavigationIndicators]="false" [showNavigationArrows]="false">
+    <ngb-carousel *ngIf="images" [showNavigationIndicators]="false" [showNavigationArrows]="true">
         <ng-template ngbSlide *ngFor="let item of images">
             <div class="ht-hp-img">
                 <img [src]="item" alt="img" />
