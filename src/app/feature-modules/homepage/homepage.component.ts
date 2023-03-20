@@ -18,7 +18,7 @@ export class HomepageComponent {
   public startingAt: string = ApplicationConstants.STARTING_AT;
   public tryForFree: string = ApplicationConstants.TRY_FOR_FREE;
   public imagesPath: string = ApplicationConstants.ASSETS_IMG;
-  public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${this.imagesPath}${img}`);
+  public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.EXT_POSTIMG_PATH}${img}`);
   public hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
 
   constructor(private ngbModal: NgbModal, private uiService: UiService) { }

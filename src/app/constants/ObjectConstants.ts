@@ -1,7 +1,7 @@
 import { IFaqs, IPricing, ISectionWithImg, ITestimonials } from "../interfaces/i-common";
 
 export class ObjectConstants {
-    public static CAROUSEL_IMGS: string[] = ['cvbc-03.jpg'];
+    public static CAROUSEL_IMGS: string[] = ['tJT2pgY7/cvbc-03.jpg'];
 
     public static CLIENT_TESTIMONY: ITestimonials[] = [
         {
