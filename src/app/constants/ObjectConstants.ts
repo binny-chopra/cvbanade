@@ -2,7 +2,7 @@ import { IFaqs, IPricing, ISectionWithImg, ITestimonials } from "../interfaces/i
 
 export class ObjectConstants {
     public static CAROUSEL_IMGS: string[] = ['50kFcxz4/cvbc-05.jpg'];
-
+    public static MARQUEE_HP_TEXT: string[] = ['The time is always right to do what is right.', 'Your CV may only be looked at for just 6 seconds. Make it worthwhile.'];
     public static CLIENT_TESTIMONY: ITestimonials[] = [
         {
             title: "Rishabh Singhania",
@@ -147,5 +147,5 @@ export class ObjectConstants {
             popular: true,
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         }
-    ]
+    ];
 }

@@ -5,6 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from '../pricing-desc/pricing-desc.component';
 import { HelpModalComponent } from '../help-modal/help-modal.component';
 import { UiService } from 'src/app/services/ui.service';
+import { AboutUsComponent } from '../about-us/about-us.component';
 
 @Component({
   selector: 'app-header',
@@ -31,5 +32,10 @@ export class HeaderComponent {
   public openHelp(): void {
     document.getElementById("navbarColor01")?.classList.remove("show");
     this.ngbModal.open(HelpModalComponent, this.uiService.openPopup());
+  }
+
+  public openAbout(): void {
+    document.getElementById("navbarColor01")?.classList.remove("show");
+    this.ngbModal.open(AboutUsComponent, this.uiService.openPopup('lg'));
   }
 }

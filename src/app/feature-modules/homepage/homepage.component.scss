@@ -60,3 +60,34 @@ img {
         font-size: 0.8rem;
     }
 }
+
+.hp-text-marquee {
+    max-width: 100%;
+    overflow: hidden;
+    letter-spacing: 0.05rem;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 70s linear infinite;
+
+    i {
+        font-size: 0.625rem;
+    }
+}
+
+.marquee section {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}

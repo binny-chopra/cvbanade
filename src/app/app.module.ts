@@ -27,6 +27,7 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-desc.component';
 import { HelpModalComponent } from './feature-modules/help-modal/help-modal.component';
 import { UiService } from './services/ui.service';
+import { AboutUsComponent } from './feature-modules/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UiService } from './services/ui.service';
     EnterCvInfoComponent,
     LoginModalComponent,
     PricingDescComponent,
-    HelpModalComponent
+    HelpModalComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

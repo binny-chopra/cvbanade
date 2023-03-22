@@ -18,6 +18,10 @@ body {
     color: $primary-color;
 }
 
+.secondary-font {
+    color: $secondary-color;
+}
+
 .dark-btn {
     @include btn-ui($secondary-color, $primary-color, $primary-dark);
 
