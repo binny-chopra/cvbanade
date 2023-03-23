@@ -4,7 +4,7 @@ import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login-modal',
+  selector: 'login-modal',
   templateUrl: './login-modal.component.html',
   styleUrls: ['./login-modal.component.scss']
 })

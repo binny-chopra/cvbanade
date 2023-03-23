@@ -28,6 +28,7 @@ import { PricingDescComponent } from './feature-modules/pricing-desc/pricing-des
 import { HelpModalComponent } from './feature-modules/help-modal/help-modal.component';
 import { UiService } from './services/ui.service';
 import { AboutUsComponent } from './feature-modules/about-us/about-us.component';
+import { ErrorComponent } from './feature-modules/error/error.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { AboutUsComponent } from './feature-modules/about-us/about-us.component'
     LoginModalComponent,
     PricingDescComponent,
     HelpModalComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

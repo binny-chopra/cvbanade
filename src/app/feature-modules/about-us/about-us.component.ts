@@ -3,7 +3,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
 
 @Component({
-  selector: 'app-about-us',
+  selector: 'about-us',
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })
