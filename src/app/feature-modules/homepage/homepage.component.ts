@@ -19,7 +19,7 @@ export class HomepageComponent {
   public tryForFree: string = ApplicationConstants.TRY_FOR_FREE;
   public imagesPath: string = ApplicationConstants.ASSETS_IMG;
   public marqueeHpTextArray: string[] = ObjectConstants.MARQUEE_HP_TEXT;
-  public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.EXT_POSTIMG_PATH}${img}`);
+  public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.CDN_IMG_PATH}${img}`);
   public hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
 
   constructor(private ngbModal: NgbModal, private uiService: UiService) { }

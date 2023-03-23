@@ -5,7 +5,7 @@ export class ApplicationConstants {
     public static APPLY_AS_WRITER: string = "Apply As Writer";
     public static COPYRIGHT: string = "© 2023 Copyright:";
     public static ASSETS_IMG: string = "assets/images/";
-    public static EXT_POSTIMG_PATH: string = "https://i.postimg.cc/"
+    public static CDN_IMG_PATH: string = "https://ik.imagekit.io/cvbanade/"
     public static HELP: string = "Help";
     public static REGISTER_NEW_USER: string = "New User ? Click to Register";
     public static LOGIN_WITH_GOOGLE: string = "Login with Google";

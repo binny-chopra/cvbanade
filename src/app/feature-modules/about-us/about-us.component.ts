@@ -10,6 +10,6 @@ import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
 
 export class AboutUsComponent {
   public closeLabel: string = ApplicationConstants.CLOSE;
-  public imagesPath: string = ApplicationConstants.ASSETS_IMG;
+  public imagesPath: string = ApplicationConstants.CDN_IMG_PATH;
   constructor(public ngbActiveModal: NgbActiveModal) { }
 }
