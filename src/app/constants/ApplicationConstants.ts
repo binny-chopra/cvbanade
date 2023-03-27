@@ -26,4 +26,6 @@ export class ApplicationConstants {
     public static HOMEPG_IMG_SUBTITLE: string = "Give your job search the best chance of success by presenting your skills and experience in the most compelling way possible with a professionally written resume.";
     public static STARTING_AT: string = "Just at the starting price of ₹299 only.";
     public static TRY_FOR_FREE: string = "TRY FOR FREE";
+    public static C_TITLE_HP: string = "div.c-title-hp";
+    public static INC_NUM_COUNTER_HP: string = "inc-number-counter-hp";
 }

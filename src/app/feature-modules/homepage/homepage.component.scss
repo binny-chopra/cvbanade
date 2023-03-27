@@ -92,3 +92,24 @@ img {
         transform: translate3d(-50%, 0, 0);
     }
 }
+
+.card-body {
+    div {
+        display: inline-block;
+    }
+
+    i {
+        font-size: 2.25rem;
+    }
+
+    .c-title-hp {
+        font-size: 2.25rem;
+        font-weight: 600;
+    }
+
+    .c-text-hp {
+        vertical-align: middle;
+        height: 100%;
+        padding-top: 0.5rem;
+    }
+}

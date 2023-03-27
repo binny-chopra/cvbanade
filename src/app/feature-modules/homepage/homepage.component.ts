@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { ApplicationConstants } from 'src/app/constants/ApplicationConstants';
 import { ObjectConstants } from 'src/app/constants/ObjectConstants';
 import { ISectionWithImg } from 'src/app/interfaces/i-common';
@@ -12,7 +12,7 @@ import { UiService } from 'src/app/services/ui.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })
-export class HomepageComponent {
+export class HomepageComponent implements AfterViewInit {
   public homepgImgTitle: string = ApplicationConstants.HOMEPG_IMG_TITLE;
   public homepgImgSubtitle: string = ApplicationConstants.HOMEPG_IMG_SUBTITLE;
   public startingAt: string = ApplicationConstants.STARTING_AT;
@@ -23,6 +23,30 @@ export class HomepageComponent {
   public hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
 
   constructor(private ngbModal: NgbModal, private uiService: UiService) { }
+
+  ngAfterViewInit(): void {
+    const counterSection: HTMLElement = document.getElementById(ApplicationConstants.INC_NUM_COUNTER_HP)!;
+    const counterSectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
+      if (!entries[0].isIntersecting) {
+        return;
+      }
+      const counterNum: NodeListOf<HTMLElement> = document.querySelectorAll(ApplicationConstants.C_TITLE_HP);
+      counterNum.forEach((currElm: HTMLElement) => {
+        const updateNumber = () => {
+          const targetNumber: number = parseInt(currElm['dataset']['number']!);
+          const initialNumber: number = parseInt(currElm.innerText);
+          const incrementNumber: number = Math.trunc(targetNumber / 100);
+          if (initialNumber < targetNumber) {
+            currElm.innerText = `${(initialNumber + incrementNumber)}+`;
+            setTimeout(updateNumber, 20);
+          }
+        }
+        updateNumber();
+      });
+      counterSectionObserver.unobserve(counterSection);
+    }, { root: null, threshold: 0 });
+    counterSectionObserver.observe(counterSection);
+  }
 
   public openPricing(): void {
     this.ngbModal.open(PricingDescComponent, this.uiService.openPopup('xl'));

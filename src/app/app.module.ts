@@ -29,7 +29,6 @@ import { HelpModalComponent } from './feature-modules/help-modal/help-modal.comp
 import { UiService } from './services/ui.service';
 import { AboutUsComponent } from './feature-modules/about-us/about-us.component';
 import { ErrorComponent } from './feature-modules/error/error.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -65,7 +64,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CarouselModule,
     NgbRatingModule
   ],
-  providers: [UiService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [UiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
