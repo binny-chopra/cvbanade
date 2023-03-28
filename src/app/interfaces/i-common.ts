@@ -8,6 +8,7 @@ export interface ISectionWithImg {
     title: string,
     description: string;
     img: string;
+    endCount?: number;
 }
 
 export interface ITestimonials {

@@ -148,4 +148,18 @@ export class ObjectConstants {
             features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
         }
     ];
+    public static HP_CLIENTS_COUNTER: ISectionWithImg[] = [
+        {
+            title: "Happy Clients",
+            description: "1257+",
+            img: "fa-solid fa-people-roof",
+            endCount: 3000
+        },
+        {
+            title: "Daily Visitors",
+            description: "4033+",
+            img: "fa-solid fa-globe",
+            endCount: 8000
+        }
+    ];
 }

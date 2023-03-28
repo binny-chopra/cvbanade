@@ -21,6 +21,7 @@ export class HomepageComponent implements AfterViewInit {
   public marqueeHpTextArray: string[] = ObjectConstants.MARQUEE_HP_TEXT;
   public images: string[] = ObjectConstants.CAROUSEL_IMGS.map((img: string) => `${ApplicationConstants.CDN_IMG_PATH}${img}`);
   public hpIconSection: ISectionWithImg[] = ObjectConstants.HOME_PG_ICON_SECTION;
+  public hpClientsCounter: ISectionWithImg[] = ObjectConstants.HP_CLIENTS_COUNTER;
 
   constructor(private ngbModal: NgbModal, private uiService: UiService) { }
 
@@ -35,10 +36,9 @@ export class HomepageComponent implements AfterViewInit {
         const updateNumber = () => {
           const targetNumber: number = parseInt(currElm['dataset']['number']!);
           const initialNumber: number = parseInt(currElm.innerText);
-          const incrementNumber: number = Math.trunc(targetNumber / 100);
           if (initialNumber < targetNumber) {
-            currElm.innerText = `${(initialNumber + incrementNumber)}+`;
-            setTimeout(updateNumber, 20);
+            currElm.innerText = `${(initialNumber + 1)}${ApplicationConstants.PLUS}`;
+            setTimeout(updateNumber, 1500);
           }
         }
         updateNumber();

@@ -28,4 +28,5 @@ export class ApplicationConstants {
     public static TRY_FOR_FREE: string = "TRY FOR FREE";
     public static C_TITLE_HP: string = "div.c-title-hp";
     public static INC_NUM_COUNTER_HP: string = "inc-number-counter-hp";
+    public static PLUS: string = "+";
 }
