@@ -126,7 +126,7 @@ export class ObjectConstants {
         `<i class="fa-solid fa-caret-left"></i>`, `<i class="fa-solid fa-caret-right"></i>`
     ]
 
-    public static FEATURES: string[] = ["ATS Compliant", "Paraphrasing", "Proofreading", "Targetted to Job", "Cover Letter"];
+    public static FEATURES: string[] = ["ATS Compliant", "Paraphrasing", "Word/PDF format", "Human Proofreading", "Targetted to Job", "Cover Letter"];
 
     public static PRICING_OPTIONS: IPricing[] = [
         {
@@ -137,9 +137,10 @@ export class ObjectConstants {
             features: [
                 { feature: this.FEATURES[0], available: true },
                 { feature: this.FEATURES[1], available: true },
-                { feature: this.FEATURES[2], available: false },
+                { feature: this.FEATURES[2], available: true },
                 { feature: this.FEATURES[3], available: false },
-                { feature: this.FEATURES[4], available: false }
+                { feature: this.FEATURES[4], available: false },
+                { feature: this.FEATURES[5], available: false },
             ]
         },
         {
@@ -151,8 +152,9 @@ export class ObjectConstants {
                 { feature: this.FEATURES[0], available: true },
                 { feature: this.FEATURES[1], available: true },
                 { feature: this.FEATURES[2], available: true },
-                { feature: this.FEATURES[3], available: false },
-                { feature: this.FEATURES[4], available: false }
+                { feature: this.FEATURES[3], available: true },
+                { feature: this.FEATURES[4], available: false },
+                { feature: this.FEATURES[5], available: false },
             ]
         },
         {
@@ -165,7 +167,8 @@ export class ObjectConstants {
                 { feature: this.FEATURES[1], available: true },
                 { feature: this.FEATURES[2], available: true },
                 { feature: this.FEATURES[3], available: true },
-                { feature: this.FEATURES[4], available: true }
+                { feature: this.FEATURES[4], available: true },
+                { feature: this.FEATURES[5], available: true },
             ]
         }
     ];
