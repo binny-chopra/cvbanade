@@ -23,5 +23,10 @@ export interface IPricing {
     price: number;
     previousPrice: number;
     popular: boolean;
-    features: string[];
+    features: IPricingFeatures[];
+}
+
+export interface IPricingFeatures {
+    feature: string;
+    available: boolean;
 }

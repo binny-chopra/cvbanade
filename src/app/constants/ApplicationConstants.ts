@@ -29,4 +29,5 @@ export class ApplicationConstants {
     public static C_TITLE_HP: string = "div.c-title-hp";
     public static INC_NUM_COUNTER_HP: string = "inc-number-counter-hp";
     public static PLUS: string = "+";
+    public static FEEDBACK_FORM: string = "https://forms.gle/o9yyBWrHZkjm6G369";
 }

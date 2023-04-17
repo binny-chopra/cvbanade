@@ -118,34 +118,47 @@ export class ObjectConstants {
         `<i class="fa-solid fa-caret-left"></i>`, `<i class="fa-solid fa-caret-right"></i>`
     ]
 
+    public static FEATURES: string[] = ["ATS Compliant", "Paraphrasing", "Proofreading", "Targetted to Job", "Cover Letter"];
+
     public static PRICING_OPTIONS: IPricing[] = [
         {
             title: "KICKSTARTER",
             price: 299,
             previousPrice: 399,
             popular: false,
-            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
-        },
-        {
-            title: "STANDARD",
-            price: 399,
-            previousPrice: 499,
-            popular: false,
-            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+            features: [
+                { feature: this.FEATURES[0], available: true },
+                { feature: this.FEATURES[1], available: true },
+                { feature: this.FEATURES[2], available: false },
+                { feature: this.FEATURES[3], available: false },
+                { feature: this.FEATURES[4], available: false }
+            ]
         },
         {
             title: "PROFESSIONAL",
-            price: 499,
-            previousPrice: 599,
-            popular: true,
-            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+            price: 399,
+            previousPrice: 499,
+            popular: false,
+            features: [
+                { feature: this.FEATURES[0], available: true },
+                { feature: this.FEATURES[1], available: true },
+                { feature: this.FEATURES[2], available: true },
+                { feature: this.FEATURES[3], available: false },
+                { feature: this.FEATURES[4], available: false }
+            ]
         },
         {
             title: "DREAM CV",
-            price: 599,
-            previousPrice: 699,
+            price: 499,
+            previousPrice: 599,
             popular: true,
-            features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"]
+            features: [
+                { feature: this.FEATURES[0], available: true },
+                { feature: this.FEATURES[1], available: true },
+                { feature: this.FEATURES[2], available: true },
+                { feature: this.FEATURES[3], available: true },
+                { feature: this.FEATURES[4], available: true }
+            ]
         }
     ];
     public static HP_CLIENTS_COUNTER: ISectionWithImg[] = [

@@ -6,7 +6,7 @@
 <div class="modal-body">
     <div class="body-margin mb-3">
         <div class="row">
-            <div class="col-12 col-md-6 col-xl-3 mt-5 mt-md-4 mt-xl-3 text-center parent"
+            <div class="col-12 col-md-6 col-xl-4 mt-5 mt-md-4 mt-xl-3 text-center parent"
                 *ngFor="let item of pricingOptions">
                 <div class="pricing-card">
                     <div class="pricing-header">
@@ -19,12 +19,14 @@
                         </div>
                     </div>
                     <span class="badge-box">Introductory offer!</span>
-                    <ul>
-                        <li *ngFor="let feature of item.features">
-                            {{feature}}
+                    <ul class="pb-5">
+                        <li *ngFor="let fName of item.features">
+                            <i *ngIf="!fName.available" class="fa-solid fa-circle-xmark gray-color"></i>
+                            <i *ngIf="fName.available" class="fa-solid fa-circle-check green-color"></i>
+                            {{fName.feature}}
                         </li>
                     </ul>
-                    <button class="dark-btn my-5">BUY NOW</button>
+                    <button *ngIf="false" class="dark-btn my-5">BUY NOW</button>
                     <div *ngIf="item.popular" class="popular">POPULAR</div>
                 </div>
             </div>
