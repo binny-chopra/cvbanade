@@ -5,6 +5,14 @@ export class ObjectConstants {
     public static MARQUEE_HP_TEXT: string[] = ['The time is always right to do what is right.', 'Your CV may only be looked at for just 6 seconds. Make it worthwhile.'];
     public static CLIENT_TESTIMONY: ITestimonials[] = [
         {
+            title: "Nakul Kansal",
+            img: "dummy-t1.jpg",
+            description: `I would like to take a moment to thank Dear Partth sir for drafting such short, concise and cool eye catching resume. I am sure it will gonna attract the attention of recruiter and talent teams that i am looking for.
+            I really appreciate Partth sir for being always available and reverting promptly to Linkedin text.
+            Now through new resume, i am really excited to apply for new opportunities starting from today itself. And now i am waiting eagerly for that day to drop you another gratitude mail for my new job very soon. Also will recommend my friends, relatives to reach you for resume drafting services.`,
+            rating: 5
+        },
+        {
             title: "Rishabh Singhania",
             img: "dummy-t1.jpg",
             description: "I was apprehensive about spending money on these services, but my resume desperately required assistance. The staff went above and beyond to be accommodating and responsive. They were comprehensive in their inquiries regarding my needs and my desired outcomes. I would give it a 10/10.",
